@@ -8,7 +8,7 @@ By 5 Oct, I hopt all the team members can really understand how the hardware(ev3
 # Introduction
 Eventhrough there are some certain reference documentations for the platform EV3dev or Python language, they are always constructed seperately. It means that taking all of those knowledge together for a specific project(Like our project) can be a very difficult thing for a beginner. So to let us better understand how the hardware works, I am going to update some 'Tutorial' here. Follow it and feel free to ask questions.
 
-As we all know, Logo EV3 is a hardware controller designed for those LEGO peripheral electronic devices, which a thing we can program on it by its software(Or we can call it IDE). Normally whitout any add-on stuff(Like sd card or usb devi
+As we all know, Logo EV3 is a hardware controller designed for those LEGO peripheral electronic devices, which is a thing we can program by its software(Or we can call it IDE) and then download it. Normally whitout any add-on stuff(Like sd card or usb devices), this controller only works with its own IDE called 'EV3 PROGRAMMER' which is a graphic interface based programming language(like Scrath). 
 
 # Turtrial
 
