@@ -87,25 +87,28 @@ All the leds on the EV3 are considered as a device under class LEDs, so we can g
 We can see there are 4 leds shown whit its property. Each of these name is a directory.
 
 >ev3:left:green:ev3dev
+>
 >ev3:left:red:ev3dev
+>
 >ev3:right:green:ev3dev
+>
 >ev3:right:red:ev3dev
 
 For example we want to test if the left red led works, we can check its dir:
 
-> cd ev3:left:red:ev3dev
+> $ cd ev3:left:red:ev3dev
 > 
-> ls
+> $ ls
 > 
-> more brightness
+> $ more brightness
 
 We just checked the brightness value of this led. If result shows 255, it means this led is on. If result shows 0, led is off. So to tune this led, we can write either 255 or 0 to switch it ON or OFF. We can use 'echo' command to change the value:
 
-> echo 255 > brightness
+> $ echo 255 > brightness
 
 Now can should see the left red led is ON!
 
-> echo 0 > brightness
+> $ echo 0 > brightness
 
 And this command should turn this led OFF.
 
