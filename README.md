@@ -21,15 +21,21 @@ Like I mentioned in the previous section, EV3 is not the only controller produce
 
 There are several different systems which are designed for LEGO controller. Here because of the hardware we already have, we only compare 2 different systems for EV3. They are:
 
-> * leJOS EV3
-> * EV3Dev
+> * [leJOS EV3](http://www.lejos.org/)
+> * [EV3Dev](http://www.ev3dev.org/)
 
 leJOS EV3 is actually a Java Virtual Machine(JVM) planted to fit EV3, which has full EV3 API and a java run time system. There is only one thing you have to know about this OS, Java language is the one and the only one language it supports. 
 
-EV3Dev is a Debian Linux-based operating system that runs on several LEGO compatible platforms including the LEGO EV3 and Raspberry Pi-powered BrickPi. It means that when we have the EV3Dev on EV3, the way we use it is more close to the way we operate an RasPi or Beaglebone etc..
+EV3Dev is a Debian Linux-based operating system that runs on several LEGO compatible platforms including the LEGO EV3 and Raspberry Pi-powered BrickPi. It means that when we have the EV3Dev on EV3, the way we use it is more close to the way we operate an RasPi or Beaglebone etc. It can support various different languages including C, Java, Python etc. 
+
+As we know that, the only we can access hardware under linux is via file system. In other word, writting or reading files is the way linux manage its hardwares. So as long as a language can run on Linux OS and has a library to access file system, it can interact with connected hardwares. **This is one of the most important reason why we decide to choose EV3Dev system.**
+
+To complete this project, there will be plenty of calculation and algorithm to use. So this is another consideration why we choose Python language. Because it has vast libraries which can help. This is also the benefits which java does not have. 
 
 # Turtrial
 - [X] 2017.09.24
+
+## How can 
 
 
 ## Difficulties
