@@ -39,7 +39,7 @@ To complete this project, there will be plenty of calculation and algorithm to u
 
 To have EV3Dev on your LEGO EV3, the only thing you need is a micro SD card. Download the latest system image file from ev3dev.org. And then you have to find a software which can flash this image file onto your card. (Notice: An image file can be considered as a image of a disk. So when you flash it onto the card, it actually changes the formattiong of the card. **This is not the same concept with COPY, that's why it is called FLASH.**)
 
-The flash tools depending on different platform are alertnative. I have done this on my Mac OS by using 'dd' command under terminal. If you are using Windown, the software and steps ![here](http://www.ev3dev.org/docs/getting-started/) you can follow. 
+The flash tools depending on different platform are alertnative. I have done this on my Mac OS by using 'dd' command under terminal. If you are using Windown, the software and steps [here](http://www.ev3dev.org/docs/getting-started/) you can follow. 
 
 When the flashing is finished, simplely insert this card to EV3. Switch on your EV3 like usual, EV3Dev os will be booted automaticly. 
 
@@ -53,17 +53,63 @@ If you check EV3 carefully, you will find that there are two usb connectors on t
 So in this condition, we consider EV3 as a indenpent devive. Connecte a usb WiFi card will give EV3 the ability to access WiFi network. Then EV3 can be seen as a device in the network. We can use SSH to access it. This is also the way I chosed. 
 
 > ### What is SSH?
-> SSH stands for Secure Shell, a protocol for operating network services securely over an unsecured network. The best known example application is for remote login to computer systems by users.
-> SHH connection can be done in terminal if you are using a Linux system. If you are using a Windows system, putty is always best choose. Find the turtroial ![here](http://www.ev3dev.org/docs/tutorials/connecting-to-ev3dev-with-ssh/).
+> SSH stands for Secure Shell, a protocol for operating network services securely over an unsecured network. The best known example application is for remote login to computer systems by its IP address.
+> 
+> SHH connection can be done in terminal if you are using a Linux system. If you are using a Windows system, putty is always best choose. Find the turtroial [here](http://www.ev3dev.org/docs/tutorials/connecting-to-ev3dev-with-ssh/).
 
 ### USB-Cable
 Instead of using wireless network, this way could be more useful if you do not have a wireless card or public WiFi has a LogIn page like ISEP's. 
 
-If you choose this way, find the details ![here](http://www.ev3dev.org/docs/tutorials/connecting-to-the-internet-via-usb/) with all the steps and nice picture illustration.
+If you choose this way, find the details [here](http://www.ev3dev.org/docs/tutorials/connecting-to-the-internet-via-usb/) with all the steps and nice picture illustration.
 
 ### Bluetooth
 
-Bluetooth is also an option for connecting EV3, but the configuration is more complicate. So I do not recommand this way. If you want more infomation, check out ![here](http://www.ev3dev.org/docs/tutorials/using-bluetooth-tethering/).
+Bluetooth is also an option for connecting EV3, but the configuration is more complicate. So I do not recommand this way. If you want more infomation, check out [here](http://www.ev3dev.org/docs/tutorials/using-bluetooth-tethering/).
+
+## How to understand the way linux manage hardware?
+
+As I wrote in the previous instruction, writting or reading files is the way linux manage its hardwares. Now I can propuse you a basic test by light on/off a LED to let you understand it :)
+
+Debian linux system save all the interactable hardware class under directory 'sys/class'. So the first ting is go into this location.
+
+> $ cd /sys/class
+
+You can now list all the contains under this location by
+
+> $ ls -al
+
+All the leds on the EV3 are considered as a device under class LEDs, so we can go into this dir.
+
+> $ cd leds
+>
+> $ ls -al
+
+We can see there are 4 leds shown whit its property. Each of these name is a directory.
+
+>ev3:left:green:ev3dev
+>ev3:left:red:ev3dev
+>ev3:right:green:ev3dev
+>ev3:right:red:ev3dev
+
+For example we want to test if the left red led works, we can check its dir:
+
+> cd ev3:left:red:ev3dev
+> 
+> ls
+> 
+> more brightness
+
+We just checked the brightness value of this led. If result shows 255, it means this led is on. If result shows 0, led is off. So to tune this led, we can write either 255 or 0 to switch it ON or OFF. We can use 'echo' command to change the value:
+
+> echo 255 > brightness
+
+Now can should see the left red led is ON!
+
+> echo 0 > brightness
+
+And this command should turn this led OFF.
+
+Now you are really able to have a perceptual understanding of how linux manage its hardwares. 
 
 ## How to make a simple sensor loop?
 
