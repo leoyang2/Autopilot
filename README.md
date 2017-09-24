@@ -52,10 +52,8 @@ If you check EV3 carefully, you will find that there are two usb connectors on t
 
 So in this condition, we consider EV3 as a indenpent devive. Connecte a usb WiFi card will give EV3 the ability to access WiFi network. Then EV3 can be seen as a device in the network. We can use SSH to access it. This is also the way I chosed. 
 
-> ###What is SSH?
-
+> ### What is SSH?
 > SSH stands for Secure Shell, a protocol for operating network services securely over an unsecured network. The best known example application is for remote login to computer systems by users.
-
 > SHH connection can be done in terminal if you are using a Linux system. If you are using a Windows system, putty is always best choose. Find the turtroial ![here](http://www.ev3dev.org/docs/tutorials/connecting-to-ev3dev-with-ssh/).
 
 ### USB-Cable
