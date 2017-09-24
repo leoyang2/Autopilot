@@ -32,7 +32,7 @@ As we know that, the only we can access hardware under linux is via file system.
 
 To complete this project, there will be plenty of calculation and algorithm to use. **So this is another consideration why we choose Python language.** Because it has vast libraries which can help. This is also the benefits which java does not have. 
 
-# Turtrial
+# Turtroial
 - [X] 2017.09.24
 
 ## How to install EV3Dev?
@@ -52,13 +52,11 @@ If you check EV3 carefully, you will find that there are two usb connectors on t
 
 So in this condition, we consider EV3 as a indenpent devive. Connecte a usb WiFi card will give EV3 the ability to access WiFi network. Then EV3 can be seen as a device in the network. We can use SSH to access it. This is also the way I chosed. 
 
+> ###What is SSH?
 
-`
-What is SSH?
+> SSH stands for Secure Shell, a protocol for operating network services securely over an unsecured network. The best known example application is for remote login to computer systems by users.
 
-SSH stands for Secure Shell, a protocol for operating network services securely over an unsecured network. The best known example application is for remote login to computer systems by users.
-
-`
+> SHH connection can be done in terminal if you are using a Linux system. If you are using a Windows system, putty is always best choose. Find the turtroial ![here](http://www.ev3dev.org/docs/tutorials/connecting-to-ev3dev-with-ssh/).
 
 ### USB-Cable
 Instead of using wireless network, this way could be more useful if you do not have a wireless card or public WiFi has a LogIn page like ISEP's. 
@@ -66,6 +64,8 @@ Instead of using wireless network, this way could be more useful if you do not h
 If you choose this way, find the details ![here](http://www.ev3dev.org/docs/tutorials/connecting-to-the-internet-via-usb/) with all the steps and nice picture illustration.
 
 ### Bluetooth
+
+Bluetooth is also an option for connecting EV3, but the configuration is more complicate. So I do not recommand this way. If you want more infomation, check out ![here](http://www.ev3dev.org/docs/tutorials/using-bluetooth-tethering/).
 
 ## How to make a simple sensor loop?
 
