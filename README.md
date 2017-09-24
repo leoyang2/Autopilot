@@ -32,7 +32,7 @@ As we know that, the only we can access hardware under Linux is via the file sys
 
 To complete this project, there will be plenty of calculation and algorithm to use. **So this is another consideration why we choose Python language.** Because it has vast libraries which can help. This is also the benefits which java does not have. 
 
-# Turtroial
+# Tutorial
 - [X] 2017.09.24
 
 ## How to install EV3Dev?
