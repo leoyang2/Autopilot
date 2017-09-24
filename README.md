@@ -19,16 +19,17 @@ As we all know, Logo EV3 is one of the most powerful hardware controller used to
 
 Like I mentioned in the previous section, EV3 is not the only controller produced by LEGO. There are indeed some other controllers, for example NXT. But the powerful feature which only appears on EV3 is that it makes possibility to run some other OS except its own! By having an operating system, surely we can do more things. 
 
-There are several different system is designed for LEGO controller. Here because of the hardware we already have, we only compare 2 different systems for EV3. They are:
+There are several different systems which are designed for LEGO controller. Here because of the hardware we already have, we only compare 2 different systems for EV3. They are:
 
-* leJOS EV3
-* EV3Dev
+> * leJOS EV3
+> * EV3Dev
 
 leJOS EV3 is actually a Java Virtual Machine(JVM) planted to fit EV3, which has full EV3 API and a java run time system. There is only one thing you have to know about this OS, Java language is the one and the only one language it supports. 
 
-EV3Dev is a Linux based system. 
-
+EV3Dev is a Debian Linux-based operating system that runs on several LEGO compatible platforms including the LEGO EV3 and Raspberry Pi-powered BrickPi. It means that when we have the EV3Dev on EV3, the way we use it is more close to the way we operate an RasPi or Beaglebone etc..
 
 # Turtrial
+- [X] 2017.09.24
+
 
 ## Difficulties
