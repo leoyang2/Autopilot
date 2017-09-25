@@ -124,9 +124,15 @@ EV3Dev OS already has the Python libraries for all the LEGO EV3 APIs integrated.
 
 When you run this command, there are someting shown in the terminal like this:
 
-![picture 1](https://github.com/CoorFun/Auto-Pilot-Demo/Tutorial/Pics/1.png)
+![picture 1](https://github.com/CoorFun/Auto-Pilot-Demo/raw/master/Tutorial/Pics/1.png)
 
 Now we are ready to start coding. 
+
+The sensor I used a ultrasonic and middle size motor as actuator. I will write a program which acquires distance as a input and then use this value to regulate the speed of motor. 
+
+```Python
+
+``` 
 
 
 
