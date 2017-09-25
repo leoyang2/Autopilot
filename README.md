@@ -116,6 +116,20 @@ Now you are really able to have a perceptual understanding of how linux manage i
 
 ## How to make a simple sensor loop?
 
+In this section, we will try to use one sensor and one actuator to make a simple logic loop. The purpose here is to understand how to use Python library and have a global view form software to hardware, they are TOGETHER. 
+
+EV3Dev OS already has the Python libraries for all the LEGO EV3 APIs integrated. So to make sure we always have the latest version of the libraries and system, we can run 'apt-get update' before start programming. This step may take some time, but be patient. (Be sure to use 'sudo' to execute as a super user. Password is the same with login, 'maker')
+
+> $ sudo apt-get update
+
+When you run this command, there are someting shown in the terminal like this:
+
+![picture 1](https://github.com/CoorFun/Auto-Pilot-Demo/Tutorial/Pics/1.png)
+
+Now we are ready to start coding. 
+
+
+
 ## How to write program locally and run promotely?
 
 ## How to study more operations?
