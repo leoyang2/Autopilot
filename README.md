@@ -224,7 +224,15 @@ time.sleep(3)
 ev3.Sound.speak('How are you?').wait()
 ``` 
 
+I have already cloned this repository onto EV3 including testing code. These code is in the 'Auto-Pilot-Demo/Test_Program' directory. If you want to modify, you can use whichever editor under linux, nano or vim. To run these program, you can execute it directly. Like this:
 
+> $ ./demo.py
+
+You can also use python3 to run it:
+
+> $ sudo python3 demo.py
+
+For more information about library classes and functions, refer to [here](http://python-ev3dev.readthedocs.io/en/stable/index.html).
 
 ## How to write program locally and run promotely?
 
