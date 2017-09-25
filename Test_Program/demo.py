@@ -4,4 +4,4 @@ import ev3dev.ev3 as ev3
 
 ev3.Sound.speak('Welcome Group 5!').wait()
 time.sleep(3)
-ev3.Sound.speak('How are you Zhang Jia ming?').wait()
+ev3.Sound.speak('How are you?').wait()
