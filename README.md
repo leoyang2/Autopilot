@@ -115,6 +115,7 @@ And this command should turn this led OFF.
 Now you are really able to have a perceptual understanding of how linux manage its hardwares. 
 
 ## How to make a simple sensor loop?
+- [X] 2017.09.25
 
 In this section, we will try to use one sensor and one actuator to make a simple logic loop. The purpose here is to understand how to use Python library and have a global view form software to hardware, they are TOGETHER. 
 
@@ -145,7 +146,73 @@ Reading package lists... Done
 
 Now we are ready to start coding. 
 
-The sensor I used a ultrasonic and middle size motor as actuator. I will write a program which acquires distance as a input and then use this value to regulate the speed of motor. 
+The sensor I used a ultrasonic and medium motor as actuator. I will write a program which acquires distance as a input and then use this value to regulate the speed of motor. 
+
+```Python 
+#!/usr/bin/env python3
+#Author: Coor
+
+from ev3dev.ev3 import *
+import ev3dev.ev3 as ev3
+
+# This is the function I made for remapping values. 
+# You can just skip this function and look it later.
+def reMap(value, maxInput, minInput, maxOutput, minOutput):
+
+	value = maxInput if value > maxInput else value
+	value = minInput if value < minInput else value
+
+	inputSpan = maxInput - minInput
+	outputSpan = maxOutput - minOutput
+
+	scaledThrust = float(value - minInput) / float(inputSpan)
+
+	return minOutput + (scaledThrust * outputSpan)
+
+# Create ultrasonic sensor entity, 
+# 'in1' is the port sensor is connected.
+
+s = ev3.UltrasonicSensor('in1')
+
+# Configure sensor mode
+# 'US-DIST-CM' means that Continuous measurement in centimeters.
+
+s.mode = 'US-DIST-CM'
+
+# Create motor entity
+# 'outA' is the port Medium motor is connected.
+
+m = ev3.MediumMotor('outA')
+
+# All the configurations are done so far
+try:
+	# Make a infinite loop
+	while True:
+		# Measure distance
+		distance = s.value()
+		# Because the speed range is from 0 - 1500
+		# Here convert distance to speed
+		# Suppose the valid distance range is from 5cm to 50cm
+		if distance < 50:
+			distance = 50
+		if distance > 500:
+			distance = 500
+
+		# Call reMap function
+		speed = reMap(distance, 500, 50, 1500, 0)
+		# Start the motor to run at the given speed
+		m.run_forever(speed_sp = speed)
+		
+		print('Current speed is %d'%speed)
+		print('Current distance is %d'%distance)
+#		time.sleep(1)
+
+except KeyboardInterrupt:
+	m.stop()
+
+```
+
+Here is another example of using the speaker. Modify the following code, try out the thing you want the robot say.
 
 ```Python
 #!/usr/bin/env python3
@@ -154,7 +221,7 @@ import ev3dev.ev3 as ev3
 
 ev3.Sound.speak('Welcome Group 5!').wait()
 time.sleep(3)
-ev3.Sound.speak('How are you Zhang Jia ming?').wait()
+ev3.Sound.speak('How are you?').wait()
 ``` 
 
 
