@@ -126,6 +126,25 @@ When you run this command, there are someting shown in the terminal like this:
 
 ![picture 1](https://github.com/CoorFun/Auto-Pilot-Demo/raw/master/Tutorial/Pics/1.png)
 
+```
+robot@ev3dev:~$ sudo apt-get update
+[sudo] password for robot:
+Get:1 http://security.debian.org jessie/updates InRelease [63.1 kB]
+Hit http://archive.ev3dev.org jessie InRelease
+Ign http://httpredir.debian.org jessie InRelease
+Hit http://httpredir.debian.org jessie Release.gpg
+Hit http://httpredir.debian.org jessie Release
+Get:2 http://security.debian.org jessie/updates/main armel Packages [537 kB]
+Get:3 http://archive.ev3dev.org jessie/main armel Packages [48.5 kB]
+Get:4 http://security.debian.org jessie/updates/contrib armel Packages [994 B]
+Get:5 http://security.debian.org jessie/updates/non-free armel Packages [20 B]
+Get:6 http://httpredir.debian.org jessie/main armel Packages [8868 kB]
+Get:7 http://httpredir.debian.org jessie/contrib armel Packages [42.9 kB]
+Get:8 http://httpredir.debian.org jessie/non-free armel Packages [71.1 kB]
+Fetched 9631 kB in 1min 38s (97.3 kB/s)
+Reading package lists... Done
+```
+
 Now we are ready to start coding. 
 
 The sensor I used a ultrasonic and middle size motor as actuator. I will write a program which acquires distance as a input and then use this value to regulate the speed of motor. 
