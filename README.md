@@ -235,6 +235,39 @@ You can also use python3 to run it:
 For more information about library classes and functions, refer to [here](http://python-ev3dev.readthedocs.io/en/stable/index.html).
 
 ## How to write program locally and run promotely?
+- [X] 2017.09.26
+
+Using terminal to program on EV3 is always an avaliable way. However, the terminal itself and the editor under linux is not designed for making big programs. You only see several lines without syntax highlighting, this could be the worest programming experience I can image. 
+
+Well, for basic test which only content no more than 10 lines is fine with terminals. But the program we are going to make is not such thing. So write your program locally is a better choice. 
+
+To easy test your program once you are done, we can simply use Git. We have set a repostory on Github already, so you can clone it onto your computer. Write your program, save it to the project directory. Commit and push it onto Github. Finally do the same clone procedure on the EV3. The lastest code will be loaded there, then you can test. With this working way, your code version can be easily tracked as well. 
+
+So here I want to mention 3 basic Git command. 
+
+To clone a repostory onto your computer(For instance our repostory):
+
+> $ git clone https://github.com/CoorFun/Auto-Pilot-Demo.git
+
+When you changed the contents, add them first(Parameter -A stands for add all):
+
+> $ git add -A
+
+Then commit the reasons why you have changed or updated:
+
+(During this procedure, you may be asked to input who you are)
+
+> $ git commit -m "The reasons"
+
+Finally, upload to respostory:
+
+(During this procedure, you may be asked to input your github username and password)
+
+> $ git push
+
+Then you are done! You can use 'pull' request to keep local content same with repostory's. This is also the way to make these updates on EV3 when you update your code:
+
+> $ git pull
 
 ## How to study more operations?
 
