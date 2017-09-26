@@ -4,6 +4,23 @@ This is the project about Auto-Pilot. We are going to build a demo car based on 
 # NOTICE
 By **5 Oct**, I hope all the team members can really understand how the hardware(ev3dev) works and be able to write a simple program(simple sensor and actuator loop). 
 
+# Table of Contents
+
+* [Introduction](https://github.com/CoorFun/Auto-Pilot-Demo#Introduction)
+* [What is the LEGO EV3 Controller?](https://github.com/CoorFun/Auto-Pilot-Demo#what-is-the-lego-ev3-controller)
+* [How can LEGO EV3 work with a OS?](https://github.com/CoorFun/Auto-Pilot-Demo#how-can-lego-ev3-work-with-a-os)
+* [Tutorial](https://github.com/CoorFun/Auto-Pilot-Demo#tutorial)
+  * [How to install EV3Dev?](https://github.com/CoorFun/Auto-Pilot-Demo#how-to-install-ev3dev)
+  * [How to access EV3Dev OS?](https://github.com/CoorFun/Auto-Pilot-Demo#how-to-access-ev3dev-os)
+    * [Network](https://github.com/CoorFun/Auto-Pilot-Demo#network)
+    * [USB-Cable](https://github.com/CoorFun/Auto-Pilot-Demo#usb-cable)
+    * [Bluetooth](https://github.com/CoorFun/Auto-Pilot-Demo#bluetooth)
+  * [How to understand the way linux manage hardware?](https://github.com/CoorFun/Auto-Pilot-Demo#how-to-understand-the-way-linux-manage-hardware)
+  * [How to make a simple sensor loop?](https://github.com/CoorFun/Auto-Pilot-Demo#how-to-make-a-simple-sensor-loop)
+  * [How to write program locally and run promotely?](https://github.com/CoorFun/Auto-Pilot-Demo#how-to-write-program-locally-and-run-promotely)
+  * [How to study more operations?](https://github.com/CoorFun/Auto-Pilot-Demo#how-to-study-more-operations)
+* [Conclusion(My experience)](https://github.com/CoorFun/Auto-Pilot-Demo#conclusionmy-experience)
+
 # Introduction
 - [X] 2017.09.22
 
