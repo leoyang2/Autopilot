@@ -28,7 +28,7 @@ leJOS EV3 is actually a Java Virtual Machine(JVM) planted to fit EV3, which has 
 
 EV3Dev is a Debian Linux-based operating system that runs on several LEGO compatible platforms including the LEGO EV3 and Raspberry Pi-powered BrickPi. It means that when we have the EV3Dev on EV3, the way we use it is closer to the way we operate an RasPi or Beaglebone etc. It can support various different languages including C, Java, Python etc. 
 
-As we know that, the only we can access hardware under Linux is via the file system. In other word, writing or reading files are the way Linux manages its hardwares. So as long as a language can run on Linux OS and has a library to access file system, it can interact with connected hardwares. **This is one of the most important reasons why we decide to choose EV3Dev system. **
+As we know that, the only we can access hardware under Linux is via the file system. In other word, writing or reading files are the way Linux manages its hardwares. So as long as a language can run on Linux OS and has a library to access file system, it can interact with connected hardwares. **This is one of the most important reasons why we decide to choose EV3Dev system.**
 
 To complete this project, there will be plenty of calculation and algorithm to use. **So this is another consideration why we choose Python language.** Because it has vast libraries which can help. This is also the benefits which java does not have. 
 
@@ -270,5 +270,25 @@ Then you are done! You can use 'pull' request to keep local content same with re
 > $ git pull
 
 ## How to study more operations?
+
+The offical EV3dev API document can be found [here](). For each different sensor and actuator, it has a specific class. Find out these class, you will see different class methods and attributes inside. All the usage and function are addressed. 
+
+For example, in the section 'Medium EV3 Motor', we can see how to operate this motor:
+
+![doc1](https://github.com/CoorFun/Auto-Pilot-Demo/raw/master/Tutorial/Pics/doc1.png)
+
+You may ask why there are only a few lines of instruction. That's because 'MediumMotor' is actually the sub-class of 'Motor' class. So let's check out what is under 'Motor' class:
+
+![doc2](https://github.com/CoorFun/Auto-Pilot-Demo/raw/master/Tutorial/Pics/doc2.png)
+
+These are the method you can apply:
+
+![doc3](https://github.com/CoorFun/Auto-Pilot-Demo/raw/master/Tutorial/Pics/doc3.png)
+
+These are the attributes you can set or check:
+
+![doc4](https://github.com/CoorFun/Auto-Pilot-Demo/raw/master/Tutorial/Pics/doc4.png)
+
+The sensors are working in the same way. Try out by yourself :)
 
 # Conclusion(My experience)
