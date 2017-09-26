@@ -2,7 +2,7 @@
 This is the project about Auto-Pilot. We are going to build a demo car based on Lego EV3DEV platform. 
 
 # NOTICE
-By **5 Oct**, I hope all the team members can really understand how the hardware(ev3dev) works and be able to write a simple program(simple sensor and actuator loop). 
+**By _5 Oct_, I hope all the team members can really understand how the hardware(ev3dev) works and be able to write a simple program(simple sensor and actuator loop).** 
 
 # Table of Contents
 
