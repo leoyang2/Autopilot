@@ -249,6 +249,14 @@ You can also use python3 to run it:
 
 > $ sudo python3 demo.py
 
+The first way you can only execute files which has the 'execute right'.(In another word, the text shown in the terminal is green.)
+
+To change the right of your program, use 'chmod' command:
+
+> $ chmod +x yourfile.py
+
+Then you will be able to use ./yourfile.py to execute.
+
 For more information about library classes and functions, refer to [here](http://python-ev3dev.readthedocs.io/en/stable/index.html).
 
 ## How to write program locally and run promotely?
