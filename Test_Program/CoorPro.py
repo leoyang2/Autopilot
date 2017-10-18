@@ -66,8 +66,9 @@ try:
 		#m.run_forever(speed_sp = speed)
 		
 		#print('Current speed is %d'%speed)
-		#print('Current distance is %d'%distance)
+		print('Current corr is %d'%correction)
 		m.run_to_abs_pos(speed_sp = 1000, position_sp = correction, stop_action = "hold")
+		
 #		time.sleep(1)
 
 except KeyboardInterrupt:
