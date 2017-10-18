@@ -26,7 +26,7 @@ s = ev3.ColorSensor('in2')
 # Configure sensor mode
 # 'US-DIST-CM' means that Continuous measurement in centimeters.
 
-s.mode = 'COL-COLOR'
+s.mode = 'COL-REFLECT'
 
 # Create motor entity
 # 'outA' is the port Medium motor is connected.
