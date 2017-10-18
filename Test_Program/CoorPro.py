@@ -39,21 +39,27 @@ KD = 0
 
 Black = 4
 White = 80
-Mid = (White - Black)/2 + Black
-
-
+middle = (White - Black)/2 + Black
+lasterror = 0
+integral = 0
 
 # All the configurations are done so far
 try:
 	# Make a infinite loop
 	while True:
 		# Measure distance
-		color = s.value()
+		value = s.value()
 		# Because the speed range is from 0 - 1500
 		# Here convert distance to speed
 		# Suppose the valid distance range is from 5cm to 50cm
-		corr = KP * (Mid - color)
-
+		
+		error = middle - value
+		integral = error + integral
+		derivative = error - lasterror
+		
+		correction = kp * error + ki * integral + kd * derivative
+		
+		lasterror = error
 		# Call reMap function
 		#position = reMap(corr, KP*(color-), 50, 1500, 0)
 		# Start the motor to run at the given speed
@@ -61,7 +67,7 @@ try:
 		
 		#print('Current speed is %d'%speed)
 		#print('Current distance is %d'%distance)
-		m.run_to_abs_pos(speed_sp = 1000, position_sp = corr, stop_action = "hold")
+		m.run_to_abs_pos(speed_sp = 1000, position_sp = correction, stop_action = "hold")
 #		time.sleep(1)
 
 except KeyboardInterrupt:
