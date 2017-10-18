@@ -35,7 +35,7 @@ m = ev3.MediumMotor('outB')
 
 KP = 1
 KI = 1
-KD = 0
+KD = 1
 
 Black = 4
 White = 80
@@ -57,7 +57,7 @@ try:
 		integral = error + integral
 		derivative = error - lasterror
 		
-		correction = kp * error + ki * integral + kd * derivative
+		correction = KP * error + KI * integral + KD * derivative
 		
 		lasterror = error
 		# Call reMap function
