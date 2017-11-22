@@ -31,7 +31,7 @@ s.mode = 'COL-REFLECT'
 # Create motor entity
 # 'outA' is the port Medium motor is connected.
 
-m = ev3.MediumMotor('outB')
+m = ev3.MediumMotor('outA')
 
 KP = 1
 KI = 0.1
