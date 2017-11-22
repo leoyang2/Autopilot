@@ -32,8 +32,8 @@ s.mode = 'COL-REFLECT'
 # 'outA' is the port Medium motor is connected.
 
 m1 = ev3.MediumMotor('outA')
-m2 = ev3.MediumMotor('outB')
-m3 = ev3.MediumMotor('outD')
+m2 = ev3.LargeMotor('outB')
+m3 = ev3.LargeMotor('outD')
 
 KP = 1
 KI = 1
