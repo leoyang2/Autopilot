@@ -34,8 +34,8 @@ s.mode = 'COL-REFLECT'
 m = ev3.MediumMotor('outB')
 
 KP = 1
-KI = 1
-KD = 1
+KI = 0.1
+KD = 0.1
 
 Black = 4
 White = 80
@@ -57,7 +57,7 @@ try:
 		integral = error + integral
 		derivative = error - lasterror
 		
-		correction = KP * error + KI * integral + KD * derivative
+		correction = KP * error #+ KI * integral + KD * derivative
 		
 		lasterror = error
 		# Call reMap function
