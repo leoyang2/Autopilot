@@ -37,8 +37,8 @@ KP = 1
 KI = 0.1
 KD = 0.1
 
-Black = 4
-White = 80
+Black = 10
+White = 93
 middle = (White - Black)/2 + Black
 lasterror = 0
 integral = 0
