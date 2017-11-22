@@ -31,18 +31,21 @@ s.mode = 'COL-REFLECT'
 # Create motor entity
 # 'outA' is the port Medium motor is connected.
 
-m = ev3.MediumMotor('outA')
+m1 = ev3.MediumMotor('outA')
+m2 = ev3.MediumMotor('outB')
+m3 = ev3.MediumMotor('outD')
 
 KP = 1
-KI = 0.1
-KD = 0.1
+KI = 1
+KD = 0
 
-Black = 10
-White = 93
+Black = 6
+White = 100
 middle = (White - Black)/2 + Black
 lasterror = 0
 integral = 0
 
+speed = 1000
 # All the configurations are done so far
 try:
 	# Make a infinite loop
@@ -67,8 +70,9 @@ try:
 		
 		print('Current color is %d'%value)
 		#print('Current corr is %d'%correction)
-		m.run_to_abs_pos(speed_sp = 1000, position_sp = correction, stop_action = "hold")
-		
+		m1.run_to_abs_pos(speed_sp = 1000, position_sp = correction, stop_action = "hold")
+		m2.run_forever(speed_sp = speed)
+		m3.run_forever(speed_sp = speed)
 #		time.sleep(1)
 
 except KeyboardInterrupt:
