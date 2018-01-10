@@ -35,8 +35,8 @@ m1 = ev3.MediumMotor('outD')
 m2 = ev3.LargeMotor('outA')
 m3 = ev3.LargeMotor('outB')
 
-KP = 0.8
-KI = 0.1
+KP = 1
+KI = 1
 KD = 0
 
 Black = 8
