@@ -69,7 +69,7 @@ try:
 		#m.run_forever(speed_sp = speed)
 		if correction >30:
 			correction = 30
-		else if correction <-30 :
+		elif correction <-30 :
 			correction = -30
 			
 		print('Current color is %d'%value)
