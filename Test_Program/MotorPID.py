@@ -36,7 +36,7 @@ m2 = ev3.LargeMotor('outA')
 m3 = ev3.LargeMotor('outB')
 
 KP = 1
-KI = 0
+KI = 1
 KD = 0
 
 Black = 9
@@ -45,7 +45,7 @@ middle = (White - Black)/2 + Black
 lasterror = 0
 integral = 0
 
-speed = -200
+speed = -50
 # All the configurations are done so far
 try:
 	# Make a infinite loop
