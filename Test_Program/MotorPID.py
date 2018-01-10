@@ -36,7 +36,7 @@ m2 = ev3.LargeMotor('outA')
 m3 = ev3.LargeMotor('outB')
 
 KP = 1
-KI = 1
+KI = 0
 KD = 0
 
 Black = 9
@@ -67,10 +67,10 @@ try:
 		#position = reMap(corr, KP*(color-), 50, 1500, 0)
 		# Start the motor to run at the given speed
 		#m.run_forever(speed_sp = speed)
-		if correction >30:
-			correction = 30
-		elif correction <-30 :
-			correction = -30
+		#if correction >30:
+		#	correction = 30
+		#elif correction <-30 :
+		#	correction = -30
 			
 		print('Current color is %d'%value)
 		print('Current corr is %d'%correction)
