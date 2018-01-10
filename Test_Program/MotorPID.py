@@ -69,7 +69,7 @@ try:
 		#m.run_forever(speed_sp = speed)
 		
 		print('Current color is %d'%value)
-		#print('Current corr is %d'%correction)
+		print('Current corr is %d'%correction)
 		m1.run_to_abs_pos(speed_sp = 1000, position_sp = correction, stop_action = "hold")
 		m2.run_forever(speed_sp = speed)
 		m3.run_forever(speed_sp = speed)
