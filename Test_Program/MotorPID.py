@@ -45,7 +45,7 @@ middle = (White - Black)/2 + Black
 lasterror = 0
 integral = 0
 
-speed = -200
+speed = -500
 # All the configurations are done so far
 try:
 	# Make a infinite loop
