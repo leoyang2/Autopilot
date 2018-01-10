@@ -76,6 +76,6 @@ try:
 #		time.sleep(1)
 
 except KeyboardInterrupt:
-	m1.stop()
+	m1.stop(stop_action = "brake")
 	m2.stop()
 	m3.stop()
