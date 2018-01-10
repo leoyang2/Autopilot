@@ -37,7 +37,7 @@ m3 = ev3.LargeMotor('outB')
 
 KP = 0.5
 KI = 0.8
-KD = 0
+KD = 1
 
 Black = 8
 White = 65
