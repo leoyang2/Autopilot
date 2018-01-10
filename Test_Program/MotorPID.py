@@ -67,7 +67,11 @@ try:
 		#position = reMap(corr, KP*(color-), 50, 1500, 0)
 		# Start the motor to run at the given speed
 		#m.run_forever(speed_sp = speed)
-		
+		if correction >30:
+			correction = 30
+		else if correction <-30 :
+			correction = -30
+			
 		print('Current color is %d'%value)
 		print('Current corr is %d'%correction)
 		m1.run_to_abs_pos(speed_sp = 1000, position_sp = correction, stop_action = "hold")
